@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ItemManager">
+  <ClassDiagramComponents>
+    <Class name="Item" package="DTO" visibility="public" xPosition="317.0" yPosition="206.0">
+      <Fields>
+        <Field name="value" type="int" visibility="private"/>
+        <Field name="creator" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="value"/>
+          <Argument type="String" name="creator"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getValue" returnType="int" visibility="public"/>
+        <Method name="getCreator" returnType="String" visibility="public"/>
+        <Method name="setValue" returnType="void" visibility="public">
+          <Argument type="int" name="value"/>
+        </Method>
+        <Method name="setCreator" returnType="void" visibility="public">
+          <Argument type="String" name="creator"/>
+        </Method>
+        <Method name="input" returnType="void" visibility="public"/>
+        <Method name="output" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Painting" package="DTO" visibility="public" xPosition="611.0" yPosition="-4.0">
+      <Fields>
+        <Field name="height" type="int" visibility="private"/>
+        <Field name="width" type="int" visibility="private"/>
+        <Field name="isWatercolour" type="boolean" visibility="private"/>
+        <Field name="isFramed" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="height"/>
+          <Argument type="int" name="width"/>
+          <Argument type="boolean" name="isWatercolour"/>
+          <Argument type="boolean" name="isFramed"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getHeight" returnType="int" visibility="public"/>
+        <Method name="getWidth" returnType="int" visibility="public"/>
+        <Method name="isIsWatercolour" returnType="boolean" visibility="public"/>
+        <Method name="isIsFramed" returnType="boolean" visibility="public"/>
+        <Method name="setHeight" returnType="void" visibility="public">
+          <Argument type="int" name="height"/>
+        </Method>
+        <Method name="setWidth" returnType="void" visibility="public">
+          <Argument type="int" name="width"/>
+        </Method>
+        <Method name="setIsWatercolour" returnType="void" visibility="public">
+          <Argument type="boolean" name="isWatercolour"/>
+        </Method>
+        <Method name="setIsFramed" returnType="void" visibility="public">
+          <Argument type="boolean" name="isFramed"/>
+        </Method>
+        <Method name="outputPainting" returnType="void" visibility="public"/>
+        <Method name="inputPainting" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Statue" package="DTO" visibility="public" xPosition="362.0" yPosition="612.0">
+      <Fields>
+        <Field name="weight" type="int" visibility="private"/>
+        <Field name="colour" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="weight"/>
+          <Argument type="String" name="colour"/>
+          <Argument type="int" name="value"/>
+          <Argument type="String" name="creator"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getWeight" returnType="int" visibility="public"/>
+        <Method name="getColour" returnType="String" visibility="public"/>
+        <Method name="setWeight" returnType="void" visibility="public">
+          <Argument type="int" name="weight"/>
+        </Method>
+        <Method name="setColour" returnType="void" visibility="public">
+          <Argument type="String" name="colour"/>
+        </Method>
+        <Method name="outputStatue" returnType="void" visibility="public"/>
+        <Method name="inputStatue" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Vase" package="DTO" visibility="public" xPosition="769.0" yPosition="405.0">
+      <Fields>
+        <Field name="height" type="int" visibility="private"/>
+        <Field name="material" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="height"/>
+          <Argument type="String" name="material"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getHeight" returnType="int" visibility="public"/>
+        <Method name="getMaterial" returnType="String" visibility="public"/>
+        <Method name="setHeight" returnType="void" visibility="public">
+          <Argument type="int" name="height"/>
+        </Method>
+        <Method name="setMaterial" returnType="void" visibility="public">
+          <Argument type="String" name="material"/>
+        </Method>
+        <Method name="outputVase" returnType="void" visibility="public"/>
+        <Method name="inputVase" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="AntiqueShop" package="GUI" visibility="public" xPosition="32.0" yPosition="291.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="DTO.Painting" target="DTO.Item"/>
+    <IsRelation name="is" source="DTO.Statue" target="DTO.Item"/>
+    <IsRelation name="is" source="DTO.Item" target="GUI.AntiqueShop"/>
+    <IsRelation name="is" source="DTO.Vase" target="DTO.Item"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
