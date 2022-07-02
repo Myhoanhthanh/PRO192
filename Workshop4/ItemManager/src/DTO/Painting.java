@@ -19,6 +19,7 @@ public class Painting extends Item {
     private boolean isFramed;
 
     public Painting() {
+        super();
         height = 0;
         width = 0;
         isWatercolour = false;
@@ -75,69 +76,25 @@ public class Painting extends Item {
 
     public void inputPainting() {
         input();
-        boolean cont = false;
-        do {
-            try {
-                Scanner sc = new Scanner(System.in);
-                System.out.print("Enter a height: ");
-                height = sc.nextInt();
-                if (height <= 0) {
-                    throw new Exception();
-                }
-                cont = false;
-            } catch (Exception e) {
-                System.out.println("Enter is error!");
-                cont = true;
-            }
-        } while (cont);
-
-        boolean cont1 = false;
-        do {
-            try {
-                Scanner sc1 = new Scanner(System.in);
-                System.out.print("Enter a width: ");
-                width = sc1.nextInt();
-                if (width <= 0) {
-                    throw new Exception();
-                }
-                cont1 = false;
-            } catch (Exception e) {
-                System.out.println("Input is error!");
-                cont1 = true;
-            }
-        } while (cont1);
-
-        boolean cont2 = false;
-        do {
-            try {
-                Scanner sc2 = new Scanner(System.in);
-                System.out.print(".Enter a watercolour: ");
-                isWatercolour = sc2.nextBoolean();
-                if (isWatercolour != true && isWatercolour != false) {
-                    throw new Exception();
-                }
-                cont2 = false;
-            } catch (Exception e) {
-                System.out.println("Input is error!");
-                cont2 = true;
-            }
-        } while (cont2);
-
-        boolean cont3 = false;
-        do {
-            try {
-                Scanner sc3 = new Scanner(System.in);
-                System.out.print("Enter a framed: ");
-                isFramed = sc3.nextBoolean();
-                if (isFramed != true && isFramed != false) {
-                    throw new Exception();
-                }
-                cont3 = false;
-            } catch (Exception e) {
-                System.out.println("Input is error!");
-                cont3 = true;
-            }
-        } while (cont3);
+        
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Input a height of painting: ");
+         height = sc.nextInt();
+        
+         
+         sc = new Scanner(System.in);
+         System.out.print("Input a width of painting: ");
+         width = sc.nextInt();
+         
+         sc = new Scanner(System.in);
+         System.out.print("Is the painting watercolor ? ( true or false )");
+         isWatercolour = sc.nextBoolean();
+         
+         sc = new Scanner(System.in);
+         System.out.print("Is the painting framed ? ( true or false ) ");
+         isFramed = sc.nextBoolean();
+         
+         
 
     }
 

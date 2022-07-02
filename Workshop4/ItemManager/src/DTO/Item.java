@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package DTO;
 import java.util.Scanner;
 /**
@@ -11,8 +7,8 @@ import java.util.Scanner;
  */
 public class Item {
 
-    private int value;
-    private String creator;
+    protected int value;
+    protected String creator;
     
     public Item(){
         value = 0;
@@ -42,49 +38,13 @@ public class Item {
     
     public void input(){
     
-        boolean cont=false;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Input a value of Item: ");
+        value = sc.nextInt();
         
-        do{
-            
-            try{
-                
-                Scanner sc=new Scanner(System.in); 
-                System.out.print("Enter a value: ");
-                value = sc.nextInt();
-                
-                if(value <= 0){
-                    throw new Exception();
-                }
-                cont = false;
-            }
-            catch (Exception e){
-                System.out.println("Input is error.");
-                cont=true;
-            }
-        }
-        
-        while(cont);
-
-        boolean cont1 = false;
-        
-        do{
-            try{
-                
-                Scanner sc1 = new Scanner(System.in); 
-                System.out.print("Enter a creator: ");
-                creator = sc1.nextLine();
-                
-                if (creator.isEmpty()){
-                    throw new Exception();
-                }
-                cont1 = false;
-            }
-            catch (Exception e){
-                System.out.println("Input is error!");
-                cont1 = true;
-            }
-        }
-        while(cont1);
+        sc = new Scanner(System.in);
+        System.out.print("Input a creator of Item: ");
+        creator = sc.nextLine();
         
          
     }
