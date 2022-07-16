@@ -68,10 +68,20 @@ public class Painting extends Item {
 
     public void outputPainting() {
         output();
-        System.out.println("Height: " + height);
-        System.out.println("Width: " + width);
-        System.out.println("IsWatercolour: " + isWatercolour);
-        System.out.println("IsFramed: " + isFramed);
+        System.out.println("Height: " + this.height);
+        System.out.println("Width: " + this.width);
+        
+        if (isWatercolour == true ){
+            System.out.println("Painting has water colour " );
+        } else {
+            System.out.println("Painting hasn't water colour " );
+        }
+        
+         if (isFramed == true ){
+            System.out.println("Painting has framed " );
+        } else {
+            System.out.println("Painting hasn't framed" );
+        }
     }
 
     public void inputPainting() {

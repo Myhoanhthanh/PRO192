@@ -17,6 +17,7 @@ public class Vase extends Item{
     private String material;
     
     public Vase(){
+        super();
         height = 0;
         material = null;
     }
@@ -25,6 +26,7 @@ public class Vase extends Item{
         this.height = height;
         this.material = material;
     }
+    
 
     public int getHeight() {
         return height;

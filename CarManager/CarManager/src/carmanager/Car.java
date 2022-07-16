@@ -67,8 +67,8 @@ public class Car {
     }
 
     public void output() {
-        System.out.println("Colour: " + Colour);
-        System.out.println("Engine Power: " + EnginePower);
+        System.out.println("Colour: " + getColour());
+        System.out.println("Engine Power: " + getEnginePower());
         if (Convertible) {
             System.out.println("Convertible: Yes");
         } else {
@@ -83,8 +83,8 @@ public class Car {
 
     public void pressAcceleratorButton() {
         System.out.println("You can press accelerator button");
-        System.out.println("Colour: " + Colour);
-        System.out.println("Engine Power: " + EnginePower);
+        System.out.println("Colour: " + getColour());
+        System.out.println("Engine Power: " + getEnginePower());
         if (Convertible) {
             System.out.println("Convertible: Yes");
         } else {

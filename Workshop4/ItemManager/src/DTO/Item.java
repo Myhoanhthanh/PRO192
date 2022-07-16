@@ -50,8 +50,8 @@ public class Item {
     }
     
     public void output(){
-        System.out.println("Value: " + value);
-        System.out.println("Creator: " + creator);
+        System.out.println("Value: " + this.value);
+        System.out.println("Creator: " + this.creator);
     }
     
     

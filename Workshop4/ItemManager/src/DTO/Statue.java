@@ -46,8 +46,8 @@ public class Statue extends Item {
 
     public void outputStatue() {
         output();
-        System.out.println("Weight: " + weight);
-        System.out.println("Colour: " + colour);
+        System.out.println("Weight: " + this.weight);
+        System.out.println("Colour: " + this.colour);
 
     }
 
